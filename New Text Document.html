@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Model Gallery 🔥</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 2rem 0 1rem;
+      font-size: 2.5rem;
+      color: #00ffd5;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      width: 90%;
+      max-width: 1200px;
+      padding: 2rem 0 4rem;
+      /* remove flex-grow here */
+    }
+
+    .card {
+      background: #1f1f1f;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 480px; /* consistent height */
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #00ffd5a0;
+    }
+
+    /* Aspect ratio container 16:9 */
+    .model-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      flex-grow: 1; /* fill vertical space */
+    }
+
+    .model-container model-viewer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #2e2e2e;
+      display: block;
+    }
+
+    .button-container {
+      padding: 1rem;
+      text-align: center;
+      /* keep button at bottom */
+    }
+
+    .download-btn {
+      padding: 10px 20px;
+      background: #00ffd5;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      background: #00bfa6;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      flex-shrink: 0;
+      width: 100%;
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #888;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>✈️ Airplane keychains ✈️</h1>
+  <div class="gallery">
+    <div class="card">
+      <div class="model-container">
+        <model-viewer 
+          src="https://example.com/model1.glb"
+          alt="Model 1"
+          poster="787keychainCOVER.jpg"
+          shadow-intensity="1"
+          auto-rotate
+          camera-controls
+          loading="lazy"
+        ></model-viewer>
+      </div>
+      <div class="button-container">
+        <a href="https://makerworld.com/en/models/1648267-boeing-787-dreamliner-keychain#profileId-1742341" target="_blank" class="download-btn">⬇️ Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="model-container">
+        <model-viewer 
+          src="https://example.com/model2.glb"
+          alt="Model 2"
+          poster="A321keychainCOVER.jpg"
+          shadow-intensity="1"
+          auto-rotate
+          camera-controls
+          loading="lazy"
+        ></model-viewer>
+      </div>
+      <div class="button-container">
+        <a href="https://example.com/model2.glb" target="_blank" class="download-btn">⬇️ Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="model-container">
+        <model-viewer 
+          src="https://example.com/model3.glb"
+          alt="Model 3"
+          poster="777keychainCOVER.jpg"
+          shadow-intensity="1"
+          auto-rotate
+          camera-controls
+          loading="lazy"
+        ></model-viewer>
+      </div>
+      <div class="button-container">
+        <a href="787keychainCOVER" target="_blank" class="download-btn">⬇️ Download</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 3D aviation keychains | GRZESISLAW
+  </footer>
+</body>
+</html>
