@@ -6,7 +6,6 @@
   <title>3D Model Gallery 🔥</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
@@ -40,7 +39,6 @@
       width: 90%;
       max-width: 1200px;
       padding: 2rem 0 4rem;
-      /* remove flex-grow here */
     }
 
     .card {
@@ -51,7 +49,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 480px; /* consistent height */
+      min-height: 520px;
     }
 
     .card:hover {
@@ -59,12 +57,11 @@
       box-shadow: 0 0 20px #00ffd5a0;
     }
 
-    /* Aspect ratio container 16:9 */
     .model-container {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
-      flex-grow: 1; /* fill vertical space */
+      padding-top: 56.25%;
+      flex-grow: 1;
     }
 
     .model-container model-viewer {
@@ -77,10 +74,16 @@
       display: block;
     }
 
+    .description {
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      text-align: center;
+      color: #ccc;
+    }
+
     .button-container {
       padding: 1rem;
       text-align: center;
-      /* keep button at bottom */
     }
 
     .download-btn {
@@ -128,6 +131,9 @@
           loading="lazy"
         ></model-viewer>
       </div>
+      <div class="description">
+        Boeing 787 Dreamliner ✈️ — sleek and modern vibes
+      </div>
       <div class="button-container">
         <a href="https://makerworld.com/en/models/1648267-boeing-787-dreamliner-keychain#profileId-1742341" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
@@ -144,6 +150,9 @@
           camera-controls
           loading="lazy"
         ></model-viewer>
+      </div>
+      <div class="description">
+        Airbus A321 🛬 — long boi keychain style
       </div>
       <div class="button-container">
         <a href="https://example.com/model2.glb" target="_blank" class="download-btn">⬇️ Download</a>
@@ -162,6 +171,9 @@
           loading="lazy"
         ></model-viewer>
       </div>
+      <div class="description">
+        Boeing 777 🔥 — thick body, smooth glide
+      </div>
       <div class="button-container">
         <a href="787keychainCOVER" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
@@ -169,7 +181,7 @@
   </div>
 
   <footer>
-    © 2025 3D aviation keychains | GRZESISLAW
+    © 2025 Boss' 3D Keychain Gallery | Made with 💀 and code
   </footer>
 </body>
 </html>
