@@ -34,10 +34,10 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* 3 columns fixed */
       gap: 1.5rem;
-      width: 92%;
-      max-width: 1400px;
+      width: 90%;
+      max-width: 1200px;
       padding: 2rem 0 4rem;
     }
 
@@ -115,9 +115,11 @@
       user-select: none;
     }
 
-    /* small screens tweak so tiles don't get cramped */
-    @media (max-width: 420px) {
-      .card { min-height: 420px; }
+    /* Mobile stacking */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -223,7 +225,6 @@
         <a href="https://makerworld.com/en/models/1672000-boeing-747-keychain#profileId-1770377" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
     </div>
-
   </div>
 
   <footer>
