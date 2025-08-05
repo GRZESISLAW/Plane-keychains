@@ -34,10 +34,10 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      width: 90%;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      width: 92%;
+      max-width: 1400px;
       padding: 2rem 0 4rem;
     }
 
@@ -49,7 +49,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 520px;
+      min-height: 480px;
     }
 
     .card:hover {
@@ -113,6 +113,11 @@
       font-size: 0.9rem;
       color: #888;
       user-select: none;
+    }
+
+    /* small screens tweak so tiles don't get cramped */
+    @media (max-width: 420px) {
+      .card { min-height: 420px; }
     }
   </style>
 </head>
@@ -178,13 +183,12 @@
         <a href="https://makerworld.com/en/models/1651134-boeing-777-keychain#profileId-1745649" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
     </div>
-  </div>
 
     <div class="card">
       <div class="model-container">
         <model-viewer 
           src="n/a"
-          alt="Model 3"
+          alt="F/A-18"
           poster="f18COVER.jpg"
           shadow-intensity="1"
           auto-rotate
@@ -199,13 +203,12 @@
         <a href="https://makerworld.com/en/models/1671987-f-a-18-keychain#profileId-1770363" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
     </div>
-  </div>
 
     <div class="card">
       <div class="model-container">
         <model-viewer 
           src="n/a"
-          alt="Model 3"
+          alt="747"
           poster="747COVER.jpg"
           shadow-intensity="1"
           auto-rotate
@@ -220,11 +223,11 @@
         <a href="https://makerworld.com/en/models/1672000-boeing-747-keychain#profileId-1770377" target="_blank" class="download-btn">⬇️ Download</a>
       </div>
     </div>
+
   </div>
-  
+
   <footer>
     © 2025 GRZESISLAW | Fully handmade for FDM priting
   </footer>
 </body>
 </html>
-
